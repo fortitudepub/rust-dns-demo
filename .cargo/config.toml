@@ -1,0 +1,4 @@
+[target.mipsel-unknown-linux-musl]
+linker = "/data/code/openwrt/staging_dir/toolchain-mipsel_24kc_gcc-12.3.0_musl/bin/mipsel-openwrt-linux-gcc"
+# prefer static linking, need check binary size
+rustflags = ["-C", "target-feature=+crt-static", "-C", "link-arg=-s"]
